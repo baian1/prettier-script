@@ -2,19 +2,39 @@
   "name": "pretty-quick",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist",
+  "bin": "bin/pretty-quick.js",
+  "keywords": [
+    "prettier"
+  ],
+  "files": [
+    "dist",
+    "bin"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "baian1",
+  "license": "MIT",
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/execa": "^2.0.0",
+    "@types/mri": "^1.1.0",
+    "@types/node": "^12.7.2",
+    "@types/prettier": "^1.18.2",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "execa": "^2.0.4",
+    "mri": "^1.1.4"
   }
 }
