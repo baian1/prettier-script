@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import format from ".."
+import format from "../src"
 import chalk from "chalk"
 
 const prettyQuickResult = format(process.cwd())

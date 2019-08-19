@@ -41,9 +41,6 @@ exports.default = (function (currentDirectory) {
     var failReasons = new Set();
     processFiles_1.default(directory, stagedChangedFiles, {
         onWriteFile: function (file) {
-            if (changedFiles.includes(file)) {
-                failReasons.add("You should commit " + file);
-            }
             log(file + " is fixed.");
             git.stageFile(directory, file);
         },

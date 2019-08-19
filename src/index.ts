@@ -34,9 +34,6 @@ export default (currentDirectory: string) => {
 
   processFiles(directory, stagedChangedFiles, {
     onWriteFile: (file: string) => {
-      if (changedFiles.includes(file)) {
-        failReasons.add(`You should commit ${file}`)
-      }
       log(`${file} is fixed.`)
       git.stageFile(directory, file)
     },
